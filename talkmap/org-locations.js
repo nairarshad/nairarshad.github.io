@@ -1,22 +1,37 @@
 var addressPoints = [
   [
-    "Berkeley CA, USA",
-    37.8708393,
-    -122.2728638
+    " Harvard University, Boston, MA, ",
+    42.36790855,
+    -71.12678237443698
   ],
   [
-    "London, UK",
-    51.5073219,
-    -0.1276473
+    " Raleigh, NC, ",
+    35.7803977,
+    -78.6390989
   ],
   [
-    "San Francisco, California",
-    37.7792808,
-    -122.4192362
+    " Washington, DC, ",
+    38.8950368,
+    -77.0365427
   ],
   [
-    "Los Angeles, CA",
-    34.0543942,
-    -118.2439408
+    " Albany, NY, ",
+    42.6511674,
+    -73.754968
+  ],
+  [
+    " Portland, OR, ",
+    45.5202471,
+    -122.674194
+  ],
+  [
+    " Boston, MA, ",
+    42.3554334,
+    -71.060511
+  ],
+  [
+    " Washington University, St. Louis, MO, ",
+    38.634807,
+    -90.258941
   ]
 ];
