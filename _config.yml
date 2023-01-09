@@ -80,11 +80,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Dr. Arshad Arjunan Nair"
+  name             : "Arshad Arjunan Nair"
   avatar           : "profile.png"
   bio              : "Postdoctoral Associate at SUNY Albany"
   location         : "Albany, NY"
-  employer         : "State University of New York at Albany"
+  employer         : 
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=arshad+nair"
   googlescholar    : "https://scholar.google.com/citations?user=MXKOuR8AAAAJ"
   email            : "aanair@albany.edu"

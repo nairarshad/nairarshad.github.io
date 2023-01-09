@@ -1,5 +1,5 @@
 ---
-title: "Socioeconomic disparities in aerosol pollutant exposure may be amplified by ultrafine particles despite declining PM$_2.5$"
+title: "Socioeconomic disparities in aerosol pollutant exposure may be amplified by ultrafine particles despite declining PM$_{2.5}$"
 collection: talks
 permalink: /talks/2022-09-01-Socioeconomic-disparities-in-aerosol-pollutant-exposure-may-be-amplified-by-ultrafine-particles-despite-declining-PM_25
 date: 2022-09-01
