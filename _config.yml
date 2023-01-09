@@ -7,9 +7,9 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Dr. Arshad Arjunan Nair"
+title                    : "Arshad Arjunan Nair"
 title_separator          : "-"
-name                     : &name "Dr. Arshad Arjunan Nair"
+name                     : &name "Arshad Arjunan Nair"
 description              : &description "Postdoctoral Associate at the State University of New York at Albany"
 url                      : https://nairarshad.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"

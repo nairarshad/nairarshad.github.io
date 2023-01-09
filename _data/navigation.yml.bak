@@ -1,5 +1,11 @@
 # main links links
 main:
+  - title: "Home"
+    url: /
+
+  - title: "Research"
+    url: /research/
+
   - title: "Publications"
     url: /publications/
 
@@ -9,5 +15,8 @@ main:
   - title: "Teaching"
     url: /teaching/        
    
+  - title: "Synergsitic Activities"
+    url: /synergistic-activities/ 
+    
   - title: "CV"
     url: /cv/
