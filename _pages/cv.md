@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[PDF](/files/aanair_academicCV.pdf)
+
 Education
 ======
 * Postdoctoral Training, State University of New York at Albany, NY, USA, Present

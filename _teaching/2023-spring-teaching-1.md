@@ -3,7 +3,7 @@ title: "Aerosol exposure and COVID-19"
 collection: teaching
 type: "Graduate course module"
 permalink: /teaching/2023-spring-teaching-1
-venue: "University at Albany, Department of Atmospheric and Environmental Sciences"
+venue: "University at Albany, Department of Environmental Health Sciences"
 date: 2023-11-07
 location: "Albany, NY, USA"
 ---
