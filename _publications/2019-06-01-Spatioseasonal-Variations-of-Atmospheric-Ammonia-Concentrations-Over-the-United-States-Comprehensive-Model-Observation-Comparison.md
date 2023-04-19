@@ -7,4 +7,4 @@ venue: 'Journal of Geophysical Research: Atmospheres'
 paperurl: 'https://doi.org/10.1029/2018jd030057'
 citation: ' Arshad Nair,  Fangqun Yu,  Gan Luo, &quot;Spatioseasonal Variations of Atmospheric Ammonia Concentrations Over the United States: Comprehensive Model-Observation Comparison.&quot; Journal of Geophysical Research: Atmospheres, 2019.'
 ---
-[Access paper here](https://doi.org/10.1029/2018jd030057){:target="_blank"}
+[PDF](/files/Nair2019-ammoniaseasonal.pdf) or [Access paper here](https://doi.org/10.1029/2018jd030057){:target="_blank"}

@@ -1,14 +1,14 @@
 ---
-title: "Machine Learning and Aerosol Microphysics"
+title: "Aerosol exposure and COVID-19"
 collection: teaching
 type: "Graduate course module"
-permalink: /teaching/2021-fall-teaching-1
+permalink: /teaching/2023-spring-teaching-1
 venue: "University at Albany, Department of Atmospheric and Environmental Sciences"
-date: 2021-11-07
+date: 2023-11-07
 location: "Albany, NY, USA"
 ---
 
-This was a four-hour module providing and overview of Machine Learning and its use in atmospheric and aerosol science, where we reviewed literature and also worked through a hand-on practival example.
+This was a one-hour module providing a quick look at aerosol exposure impacts on COVID-19 and its outcomes. Specifically, we looked at exposure disparities, health disparities, aerosol-health associations, and considered the implications under a changing climate. 
 
 Overview of Machine Learning and its use in atmospheric and aerosol science
 ======

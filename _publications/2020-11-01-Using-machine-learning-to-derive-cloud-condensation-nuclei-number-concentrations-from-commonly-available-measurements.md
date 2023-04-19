@@ -7,4 +7,4 @@ venue: 'Atmospheric Chemistry and Physics'
 paperurl: 'https://doi.org/10.5194/acp-20-12853-2020'
 citation: ' Arshad Nair,  Fangqun Yu, &quot;Using machine learning to derive cloud condensation nuclei number concentrations from commonly available measurements.&quot; Atmospheric Chemistry and Physics, 2020.'
 ---
-[Access paper here](https://doi.org/10.5194/acp-20-12853-2020){:target="_blank"}
+[PDF](/files/NairYu2020-MLCCN.pdf) or [Access paper here](https://doi.org/10.5194/acp-20-12853-2020){:target="_blank"}
