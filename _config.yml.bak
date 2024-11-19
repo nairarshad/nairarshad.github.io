@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Arshad Arjunan Nair"
 title_separator          : "-"
 name                     : &name "Arshad Arjunan Nair"
-description              : &description "Research Scientist, University at Albany"
+description              : &description "Postdoctoral Associate at the State University of New York at Albany"
 url                      : https://nairarshad.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "nairarshad.github.io"
@@ -83,7 +83,7 @@ analytics:
 author:
   name             : "Arshad Arjunan Nair"
   avatar           : "profile.png"
-  bio              : "Research Scientist, University at Albany"
+  bio              : "Postdoctoral Associate at University at Albany"
   location         : "Albany, NY"
   employer         : 
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=arshad+nair"
@@ -256,7 +256,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
