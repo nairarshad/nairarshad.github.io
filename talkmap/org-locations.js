@@ -1,8 +1,8 @@
 var addressPoints = [
   [
     " Harvard University, Boston, MA, ",
-    42.36790855,
-    -71.12678237443698
+    42.3659617,
+    -71.12150636791128
   ],
   [
     " Raleigh, NC, ",
@@ -30,8 +30,23 @@ var addressPoints = [
     -71.060511
   ],
   [
-    " Washington University, St. Louis, MO, ",
-    38.634807,
-    -90.258941
+    " Denver, CO, ",
+    39.7392364,
+    -104.984862
+  ],
+  [
+    " Atlanta, GA, ",
+    33.7489924,
+    -84.3902644
+  ],
+  [
+    " Harvard University, St. Louis, MO, ",
+    38.65980862658746,
+    -90.30952956462292
+  ],
+  [
+    " National Harbor, MD, ",
+    38.783342000000005,
+    -77.01482848047912
   ]
 ];
