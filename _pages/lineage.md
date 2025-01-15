@@ -28,7 +28,7 @@ _under the advisement of_
 
 Known for: Nuclear Winter
 
-Ph.D. University of Illinois at Urbana-Champaign 1971 United States\
+Ph.D. University of Illinois at Urbana-Champaign 1971 United States <br />
 Dissertation: An Investigation of the Ionospheric D Region at Sunrise
 
 _under the (primary) advisement of_
