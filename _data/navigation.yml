@@ -19,4 +19,7 @@ main:
  #   url: /synergistic-activities/ 
     
   - title: "CV"
-    url: /cv/
+    url: /cv/ 
+    
+  - title: "Academic Lineage"
+    url: /lineage/

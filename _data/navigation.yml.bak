@@ -15,8 +15,8 @@ main:
   - title: "Teaching"
     url: /teaching/        
    
-  - title: "Synergistic Activities"
-    url: /synergistic-activities/ 
+ # - title: "Synergistic Activities"
+ #   url: /synergistic-activities/ 
     
   - title: "CV"
     url: /cv/
