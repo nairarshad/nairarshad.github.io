@@ -249,9 +249,10 @@ permalink: /lineage/
 <div style="display: flex; align-items: center; margin-bottom: 20px;">
   <img src="/lineage/tartaglia.png" alt="Niccol&ograve; Fontana Tartaglia" style="width: 125px; margin-right: 20px;">
   <div>
-    <strong>Niccol&ograve; Fontana Tartaglia</strong> <br />
+    <strong>Niccol&ograve; Tartaglia</strong> <br />
     Known for: "eviscerating Aristotelian terms of projectile movement" <br />
-    Verona and Venice <br />
+	Dissertation: <em>Nova Scientia</em>  <br />
+    Verona and Venice 1537 <br />
     <em>after reading the translated works of</em>
   </div>
 </div>
@@ -261,6 +262,18 @@ permalink: /lineage/
   <div>
     <strong>Muhammad ibn Musa Al-Khwarizmi</strong> <br />
     Known for: Hindu&ndash;Arabic numeral system and Algebra <br />
-    House of Wisdom in Baghdad
+    House of Wisdom in Baghdad 820 <br />
+    <em>translating the works of</em>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="/lineage/brahmagupta.png" alt="Brahmagupta" style="width: 125px; margin-right: 20px;">
+  <div>
+    <strong>Brahmagupta</strong> <br />
+    Known for: Describing gravity, Quadratic formula <br />
+	Dissertation: ब्राह्मस्फुटसिद्धान्तः <br />
+    Brahmapaksha School of Astronomy 628 <br />
+    <em>influenced by the works of</em>
   </div>
 </div>
