@@ -4,7 +4,28 @@ layout: archive
 permalink: /lineage/
 ---
 
-![Arshad's academic ancestors](/files/lineage.png)
+![Arshad's academic ancestors](/lineage/lineage.png)
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="/lineage/nair.png" alt="Arshad Arjunan Nair" style="width: 100px; margin-right: 20px;">
+  <div>
+    <strong>Arshad Arjunan Nair</strong> <br />
+    Ph.D. University at Albany, State University of New York 2021 <br />
+    Dissertation: The Role of Ammonia in Atmospheric New Particle Formation and Implications for Cloud Condensation Nuclei <br />
+    <em>under the advisement of</em>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+  <img src="/lineage/yu.png" alt="Fangqun Yu" style="width: 100px; margin-right: 20px;">
+  <div>
+    <strong>Fangqun Yu</strong> <br />
+    Known for: Ion-mediated atmospheric new particle formation <br />
+    Ph.D. University of California, Los Angeles 1998 <br />
+    Dissertation: A Study of the Formation and Evolution of Aerosols and Contrails in Aircraft Wakes: Development, Validation and Application of an Advanced Particle Microphysics (APM) Model <br />
+    <em>under the advisement of</em>
+  </div>
+</div>
 
 **Arshad Arjunan Nair** <br />
 Ph.D. University at Albany, State University of New York 2021 <br />
@@ -14,7 +35,7 @@ _under the advisement of_
 **Fangqun Yu** <br />
 Known for: Ion-mediated atmospheric new particle formation <br />
 Ph.D. University of California, Los Angeles 1998 <br />
-Dissertation: The Role of Ammonia in Atmospheric New Particle Formation and Implications for Cloud Condensation Nuclei <br />
+Dissertation: A Study of the Formation and Evolution of Aerosols and Contrails in Aircraft Wakes: Development, Validation and Application of an Advanced Particle Microphysics (APM) Model <br />
 _under the advisement of_
 
 **Richard Peter Turco** <br />
