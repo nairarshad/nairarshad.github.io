@@ -1,0 +1,689 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.2">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;AAC 2025 – Custom Schedule Builder&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f7f7fb;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #1f4f7b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 1.6rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header p {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0.25rem 0 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.95rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>main {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>max-width: 1100px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: 0 2px 6px rgba(0,0,0,0.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 1rem 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 1.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.filters {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.5rem 1rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.filters label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-right: 0.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>select, input[type="text"], textarea {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.25rem 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 140px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>textarea {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-height: 140px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>resize: vertical;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.4rem 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #1f4f7b;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #fff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.3rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button.secondary {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #e0e4ec;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>cursor: default;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.events-summary {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>table {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-collapse: collapse;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.9rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>th, td {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.4rem 0.35rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid #eee;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>vertical-align: top;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>th {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: left;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #f2f4f9;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: sticky;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>z-index: 1;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody tr:nth-child(even) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #fafbff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.col-select {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 32px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.col-day {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 66px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.col-time {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 110px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.col-room {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 150px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.badge {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: inline-block;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.05rem 0.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #eef2ff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #222;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-right: 0.25rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.session-label {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #555;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 0.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.title-cell {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.location-text {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #777;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.1rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pill-row {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pill-row button {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.8rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 0.25rem 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 0.85rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #444;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.4rem;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status.error {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #b00020;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sticky-footer {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 0.5rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 0.75rem;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@media (max-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.filters {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>align-items: flex-start;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.col-room {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;h1&gt;AAC 2025 – Custom Schedule Builder&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;p&gt;Select talks you’re interested in and download a personalized .ics for your calendar.&lt;/p&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 style="margin-top:0;"&gt;1. Load conference schedule&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p style="font-size:0.9rem;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>This page will first try to load &lt;code&gt;AAC2025_conference_schedule.ics&lt;/code&gt; from the same folder.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>If that fails (e.g. opened directly from disk), you can paste the .ics content manually.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pill-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="btnReload"&gt;Reload .ics from file&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="secondary" id="btnParseManual"&gt;Parse pasted .ics&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;label for="icsText" style="display:block;margin-top:0.5rem;font-size:0.9rem;"&gt;Optional: paste .ics content here&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;textarea id="icsText" placeholder="Paste AAC2025_conference_schedule.ics content here if automatic loading fails..."&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="loadStatus" class="status"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;section class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;h2 style="margin-top:0;"&gt;2. Filter &amp; select talks&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="filters"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="dayFilter"&gt;Day:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="dayFilter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="all"&gt;All days&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="roomFilter"&gt;Room:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="roomFilter"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;option value="all"&gt;All rooms&lt;/option&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="flex:1 1 200px;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;label for="searchInput"&gt;Search:&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="searchInput" placeholder="Title, speaker, session..." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button class="secondary" id="btnClearFilters"&gt;Clear filters&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="pill-row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="secondary" id="btnSelectVisible"&gt;Select all in view&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button class="secondary" id="btnClearSelection"&gt;Clear selection&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="events-summary" id="eventsSummary"&gt;No events loaded yet.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div style="max-height:480px;overflow:auto;margin-top:0.5rem;border-radius:8px;border:1px solid #e0e3ef;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;th class="col-select"&gt;&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;th class="col-day"&gt;Day&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;th class="col-time"&gt;Time&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;th&gt;Session &amp;amp; Title&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;th class="col-room"&gt;Room&lt;/th&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/tr&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody id="eventsBody"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sticky-footer"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="selectionStatus" class="status"&gt;Selected: 0 talks.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button id="btnDownload" disabled&gt;Download selected as .ics&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/section&gt;</p>
+<p class="p1">&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Simple ICS unfolder: join lines that start with space/tab to previous line.</p>
+<p class="p1"><span class="Apple-converted-space">  </span>function unfoldICS(icsText) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const rawLines = icsText.replace(/\r\n/g, "\n").replace(/\r/g, "\n").split("\n");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const unfolded = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (let line of rawLines) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (line.startsWith(" ") || line.startsWith("\t")) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (unfolded.length &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>unfolded[unfolded.length - 1] += line.slice(1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>unfolded.push(line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return unfolded;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function parseICS(icsText) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const lines = unfoldICS(icsText);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const events = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let inEvent = false;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let eventLines = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const line of lines) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (line.trim() === "BEGIN:VEVENT") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>inEvent = true;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>eventLines = ["BEGIN:VEVENT"];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (line.trim() === "END:VEVENT") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (inEvent) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>eventLines.push("END:VEVENT");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const raw = eventLines.join("\r\n");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const parsed = parseEvent(eventLines);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (parsed) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>parsed.raw = raw;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>events.push(parsed);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>inEvent = false;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>eventLines = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (inEvent) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>eventLines.push(line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return events;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function parseEvent(eventLines) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let dtstart = null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let dtend = null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let summary = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let location = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let uid = "";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const line of eventLines) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (line.startsWith("DTSTART")) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const parts = line.split(":");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (parts[1]) dtstart = parts[1].trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (line.startsWith("DTEND")) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const parts = line.split(":");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (parts[1]) dtend = parts[1].trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (line.startsWith("SUMMARY")) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const idx = line.indexOf(":");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (idx &gt;= 0) summary = line.slice(idx + 1).trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (line.startsWith("LOCATION")) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const idx = line.indexOf(":");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (idx &gt;= 0) location = line.slice(idx + 1).trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else if (line.startsWith("UID")) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const idx = line.indexOf(":");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (idx &gt;= 0) uid = line.slice(idx + 1).trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!dtstart || !dtend) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function parseDt(dt) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// Expect YYYYMMDDTHHMMSS or YYYYMMDD</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const m = dt.match(/^(\d{4})(\d{2})(\d{2})T?(\d{2})?(\d{2})?(\d{2})?/);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!m) return null;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const year = parseInt(m[1], 10);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const month = parseInt(m[2], 10);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const day = parseInt(m[3], 10);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const hour = m[4] ? parseInt(m[4], 10) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const minute = m[5] ? parseInt(m[5], 10) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const second = m[6] ? parseInt(m[6], 10) : 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return { year, month, day, hour, minute, second };</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const s = parseDt(dtstart);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const e = parseDt(dtend);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!s || !e) return null;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dateKey = `${s.year}-${String(s.month).padStart(2,"0")}-${String(s.day).padStart(2,"0")}`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const timeStr = `${String(s.hour).padStart(2,"0")}:${String(s.minute).padStart(2,"0")}–${String(e.hour).padStart(2,"0")}:${String(e.minute).padStart(2,"0")}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Attempt to infer "Day N" mapping from date (specific to AAC 2025 Dec 1-4)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let dayLabel = dateKey;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let dayNumber = null;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (dateKey === "2025-12-01") { dayLabel = "Day 1 (Dec 1)"; dayNumber = 1; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else if (dateKey === "2025-12-02") { dayLabel = "Day 2 (Dec 2)"; dayNumber = 2; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else if (dateKey === "2025-12-03") { dayLabel = "Day 3 (Dec 3)"; dayNumber = 3; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>else if (dateKey === "2025-12-04") { dayLabel = "Day 4 (Dec 4)"; dayNumber = 4; }</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Try splitting summary into session + title: we encoded as "Ses. X ... - Talk title"</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let session = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let title = summary;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const split = summary.split(" - ");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (split.length &gt; 1 &amp;&amp; split[0].startsWith("Ses.")) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>session = split[0];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>title = split.slice(1).join(" - ");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Try to extract room from location: text inside parentheses</p>
+<p class="p1"><span class="Apple-converted-space">    </span>let room = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const mRoom = location.match(/\(([^)]+)\)\s*$/);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (mRoom) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>room = mRoom[1].trim();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>return {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>id: uid || (dtstart + "-" + summary),</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dtstart,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dtend,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dateKey,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dayLabel,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dayNumber,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>timeStr,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>summary,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>session,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>title,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>location,</p>
+<p class="p1"><span class="Apple-converted-space">      </span>room</p>
+<p class="p1"><span class="Apple-converted-space">    </span>};</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>let allEvents = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let filteredEvents = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const selectedIds = new Set();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const dayFilterEl = document.getElementById("dayFilter");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const roomFilterEl = document.getElementById("roomFilter");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const searchInputEl = document.getElementById("searchInput");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const eventsBodyEl = document.getElementById("eventsBody");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const eventsSummaryEl = document.getElementById("eventsSummary");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const selectionStatusEl = document.getElementById("selectionStatus");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const btnDownload = document.getElementById("btnDownload");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const loadStatusEl = document.getElementById("loadStatus");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const icsTextEl = document.getElementById("icsText");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function applyFilters() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dayVal = dayFilterEl.value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const roomVal = roomFilterEl.value;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const searchVal = searchInputEl.value.trim().toLowerCase();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>filteredEvents = allEvents.filter(ev =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (dayVal !== "all") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (String(ev.dayNumber) !== dayVal) return false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (roomVal !== "all") {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (ev.room !== roomVal) return false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (searchVal) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const text = (ev.title + " " + ev.session + " " + ev.location + " " + ev.summary).toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!text.includes(searchVal)) return false;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return true;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderEventsTable();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function renderFilters() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Day filter options</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dayOptions = Array.from(new Set(</p>
+<p class="p1"><span class="Apple-converted-space">      </span>allEvents</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.map(ev =&gt; ev.dayNumber)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.filter(d =&gt; d !== null)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>)).sort((a,b) =&gt; a - b);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>dayFilterEl.innerHTML = '&lt;option value="all"&gt;All days&lt;/option&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const d of dayOptions) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const label = `Day ${d}`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const opt = document.createElement("option");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opt.value = String(d);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opt.textContent = label;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>dayFilterEl.appendChild(opt);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>// Room filter options</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const roomOptions = Array.from(new Set(</p>
+<p class="p1"><span class="Apple-converted-space">      </span>allEvents.map(ev =&gt; ev.room).filter(r =&gt; r &amp;&amp; r.trim() !== "")</p>
+<p class="p1"><span class="Apple-converted-space">    </span>)).sort();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>roomFilterEl.innerHTML = '&lt;option value="all"&gt;All rooms&lt;/option&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const r of roomOptions) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const opt = document.createElement("option");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opt.value = r;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opt.textContent = r;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>roomFilterEl.appendChild(opt);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function renderEventsTable() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>eventsBodyEl.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (filteredEvents.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const tr = document.createElement("tr");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const td = document.createElement("td");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>td.colSpan = 5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>td.textContent = "No events match the current filters.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>td.style.fontStyle = "italic";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>tr.appendChild(td);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>eventsBodyEl.appendChild(tr);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (const ev of filteredEvents) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tr = document.createElement("tr");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tdSel = document.createElement("td");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdSel.className = "col-select";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const cb = document.createElement("input");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cb.type = "checkbox";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cb.dataset.id = ev.id;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cb.checked = selectedIds.has(ev.id);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>cb.addEventListener("change", () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (cb.checked) selectedIds.add(ev.id);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>else selectedIds.delete(ev.id);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>updateSelectionStatus();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdSel.appendChild(cb);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tdDay = document.createElement("td");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdDay.className = "col-day";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdDay.textContent = ev.dayLabel || ev.dateKey;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tdTime = document.createElement("td");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdTime.className = "col-time";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdTime.textContent = ev.timeStr;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tdTitle = document.createElement("td");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const titleDiv = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>titleDiv.className = "title-cell";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>titleDiv.textContent = ev.title || ev.summary;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdTitle.appendChild(titleDiv);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (ev.session) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const sess = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>sess.className = "session-label";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>sess.textContent = ev.session;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>tdTitle.insertBefore(sess, titleDiv);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (ev.location) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const loc = document.createElement("div");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>loc.className = "location-text";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>loc.textContent = ev.location;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>tdTitle.appendChild(loc);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tdRoom = document.createElement("td");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tdRoom.className = "col-room";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (ev.room) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const span = document.createElement("span");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>span.className = "badge";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>span.textContent = ev.room;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>tdRoom.appendChild(span);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>tdRoom.textContent = "";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr.appendChild(tdSel);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr.appendChild(tdDay);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr.appendChild(tdTime);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr.appendChild(tdTitle);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tr.appendChild(tdRoom);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>eventsBodyEl.appendChild(tr);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>eventsSummaryEl.textContent = `Loaded ${allEvents.length} events. Showing ${filteredEvents.length} with current filters.`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>updateSelectionStatus();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function updateSelectionStatus() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const count = selectedIds.size;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>selectionStatusEl.textContent = `Selected: ${count} talk${count === 1 ? "" : "s"}.`;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>btnDownload.disabled = count === 0;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function loadICSFromFile() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>loadStatusEl.textContent = "Loading AAC2025_conference_schedule.ics...";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>loadStatusEl.className = "status";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>fetch("AAC2025_conference_schedule.ics")</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.then(resp =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!resp.ok) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>throw new Error("HTTP " + resp.status);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return resp.text();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.then(text =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>allEvents = parseICS(text);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!allEvents || allEvents.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>throw new Error("No events found in .ics");</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadStatusEl.textContent = `Loaded ${allEvents.length} events from AAC2025_conference_schedule.ics.`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadStatusEl.className = "status";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>renderFilters();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>applyFilters();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>})</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.catch(err =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>console.error(err);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadStatusEl.textContent = "Could not load AAC2025_conference_schedule.ics automatically. You can paste the file contents into the box above and click 'Parse pasted .ics'.";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>loadStatusEl.className = "status error";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>});</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function parseManualICS() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const text = icsTextEl.value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!text) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadStatusEl.textContent = "Please paste .ics content before parsing.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadStatusEl.className = "status error";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>allEvents = parseICS(text);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!allEvents || allEvents.length === 0) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>throw new Error("No events parsed.");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadStatusEl.textContent = `Parsed ${allEvents.length} events from pasted .ics.`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadStatusEl.className = "status";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>renderFilters();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>applyFilters();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>console.error(e);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadStatusEl.textContent = "Failed to parse pasted .ics content.";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>loadStatusEl.className = "status error";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function selectVisible() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const ev of filteredEvents) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>selectedIds.add(ev.id);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderEventsTable();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function clearSelection() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>selectedIds.clear();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>renderEventsTable();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function clearFilters() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dayFilterEl.value = "all";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>roomFilterEl.value = "all";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>searchInputEl.value = "";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>applyFilters();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function downloadSelectedICS() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const selected = allEvents.filter(ev =&gt; selectedIds.has(ev.id));</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (selected.length === 0) return;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const dtstamp = new Date().toISOString().replace(/[-:]/g, "").split(".")[0] + "Z";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const lines = [];</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lines.push("BEGIN:VCALENDAR");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lines.push("VERSION:2.0");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lines.push("PRODID:-//AAC2025 Custom Schedule//EN");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>lines.push("CALSCALE:GREGORIAN");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>for (const ev of selected) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// We reuse the raw VEVENT block but ensure it has a DTSTAMP (not strictly required if already present).</p>
+<p class="p1"><span class="Apple-converted-space">      </span>// For simplicity, we just insert DTSTAMP if not found.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const evLines = ev.raw.replace(/\r\n/g, "\n").split("\n");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>let hasDtstamp = evLines.some(l =&gt; l.startsWith("DTSTAMP"));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const out = [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>for (const l of evLines) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (l.trim() === "BEGIN:VEVENT") {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>out.push("BEGIN:VEVENT");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>if (!hasDtstamp) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>out.push("DTSTAMP:" + dtstamp);</p>
+<p class="p1"><span class="Apple-converted-space">          </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>out.push(l);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">      </span>lines.push(...out);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>lines.push("END:VCALENDAR");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const icsOut = lines.join("\r\n");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>const blob = new Blob([icsOut], { type: "text/calendar" });</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const url = URL.createObjectURL(blob);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const a = document.createElement("a");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a.href = url;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a.download = "AAC2025_custom_schedule.ics";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.body.appendChild(a);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>a.click();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>document.body.removeChild(a);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>URL.revokeObjectURL(url);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Wire up events</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("btnReload").addEventListener("click", loadICSFromFile);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("btnParseManual").addEventListener("click", parseManualICS);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>dayFilterEl.addEventListener("change", applyFilters);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>roomFilterEl.addEventListener("change", applyFilters);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>searchInputEl.addEventListener("input", applyFilters);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("btnClearFilters").addEventListener("click", clearFilters);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("btnSelectVisible").addEventListener("click", selectVisible);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>document.getElementById("btnClearSelection").addEventListener("click", clearSelection);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>btnDownload.addEventListener("click", downloadSelectedICS);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>// Try auto-load once on startup</p>
+<p class="p1"><span class="Apple-converted-space">  </span>loadICSFromFile();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
