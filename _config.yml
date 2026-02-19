@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Arshad Arjunan Nair"
 title_separator          : "-"
 name                     : &name "Arshad Arjunan Nair"
-description              : &description "Research Scientist, University at Albany"
+description              : &description "Ramanujan Fellow"
 url                      : https://nairarshad.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "nairarshad.github.io"
@@ -83,12 +83,12 @@ analytics:
 author:
   name             : "Arshad Arjunan Nair"
   avatar           : "profile.png"
-  bio              : "Research Scientist, University at Albany"
-  location         : "Albany, NY"
+  bio              : "Ramanujan Fellow"
+  location         : "Thiruvananthapuram, Kerala, India"
   employer         : 
   pubmed           : "https://pubmed.ncbi.nlm.nih.gov/?term=arshad+nair"
   googlescholar    : "https://scholar.google.com/citations?user=MXKOuR8AAAAJ"
-  email            : "aanair@albany.edu"
+  email            : "nairarshad@gmail.com"
   researchgate     : "https://www.researchgate.net/profile/Arshad-Nair"
   uri              :
   bitbucket        :
@@ -114,7 +114,7 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : "NairArshad"
   wikipedia        :
 
 
