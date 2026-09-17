@@ -1,0 +1,67 @@
+# Edit page text in the .md files. These settings rarely need to change.
+title: Arshad Arjunan Nair
+name: Arshad Arjunan Nair
+description: Arshad Arjunan Nair connects atmospheric physics, climate, machine learning, and environmental health.
+url: https://nairarshad.github.io
+baseurl: ''
+lang: en
+timezone: UTC
+email: nairarshad@gmail.com
+role: Atmospheric scientist
+scholar_url: https://scholar.google.com/citations?user=MXKOuR8AAAAJ
+orcid_url: https://orcid.org/0000-0003-2530-7757
+github_url: https://github.com/nairarshad
+cv_pdf: /files/aanair_academicCV.pdf
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+permalink: pretty
+strict_front_matter: true
+plugins:
+- jekyll-sitemap
+collections:
+  research:
+    output: true
+    permalink: /research/:name/
+  publications:
+    output: true
+    permalink: /publications/:name/
+  talks:
+    output: true
+    permalink: /talks/:name/
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: page
+- scope:
+    path: ''
+    type: research
+  values:
+    layout: project
+    section: research
+- scope:
+    path: ''
+    type: publications
+  values:
+    layout: publication
+    section: publications
+- scope:
+    path: ''
+    type: talks
+  values:
+    layout: talk
+    section: talks
+exclude:
+- Gemfile
+- Gemfile.lock
+- README.md
+- EDITING.md
+- UPLOAD_TO_GITHUB.md
+- VALIDATION.md
+- ASSET_NOTES.md
+- tools
+- vendor
+hero_image: /assets/images/atmospheric-research.png

@@ -1,0 +1,14 @@
+<article class="paper-row">
+  <div class="paper-meta"><span>{{ include.paper.year }}</span><span>{{ include.paper.journal }}</span></div>
+  <div class="paper-main">
+    <h3><a href="{{ include.paper.url | relative_url }}">{{ include.paper.title }}</a></h3>
+    {% unless include.compact %}<p class="authors">{{ include.paper.authors }}</p>{% endunless %}
+    {% if include.paper.contribution %}<p class="contribution">{{ include.paper.contribution }}</p>{% endif %}
+    <div class="paper-links">
+      {% if include.paper.doi %}<a href="{{ include.paper.doi }}">Journal article <span aria-hidden="true">↗</span></a>{% endif %}
+      {% if include.paper.pdf %}<a href="{{ include.paper.pdf | relative_url }}">PDF</a>{% endif %}
+      <a href="{{ include.paper.url | relative_url }}">Details</a>
+    </div>
+  </div>
+</article>
+

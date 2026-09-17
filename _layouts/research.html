@@ -1,0 +1,7 @@
+---
+layout: default
+---
+<header class="page-header shell"><p class="eyebrow">Research</p><h1>{{ page.headline }}</h1><p class="page-description">{{ page.description }}</p></header>
+<div class="shell research-overview prose">{{ content }}</div>
+<section class="shell research-projects"><div class="project-grid">{% assign projects = site.research | sort: 'order' %}{% for project in projects %}{% include project-card.html project=project %}{% endfor %}</div></section>
+

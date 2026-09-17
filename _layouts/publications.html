@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<header class="page-header shell"><p class="eyebrow">Publications</p><h1>{{ page.headline }}</h1><div class="page-description prose">{{ content }}</div><a class="text-link" href="{{ site.scholar_url }}">Google Scholar <span aria-hidden="true">↗</span></a></header>
+<div class="shell publications-body">
+  {% assign papers = site.publications | sort: 'date' | reverse %}{% assign groups = papers | group_by: 'year' %}
+  <nav class="year-nav" aria-label="Publication years">{% for group in groups %}<a href="#year-{{ group.name }}">{{ group.name }}</a>{% endfor %}</nav>
+  {% for group in groups %}<section class="publication-year" id="year-{{ group.name }}"><h2>{{ group.name }}</h2><div class="paper-list">{% for paper in group.items %}{% include paper-row.html paper=paper %}{% endfor %}</div></section>{% endfor %}
+</div>
+
