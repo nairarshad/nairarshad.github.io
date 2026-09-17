@@ -1,0 +1,12 @@
+<section class="lineage-preview shell" aria-labelledby="lineage-preview-heading">
+  <div class="section-heading">
+    <div><p class="eyebrow">People &amp; ideas</p><h2 id="lineage-preview-heading">{{ page.lineage_preview.heading }}</h2></div>
+    <a class="text-link" href="{{ '/lineage/' | relative_url }}">{{ page.lineage_preview.link_text }} <span aria-hidden="true">↗</span></a>
+  </div>
+  <p class="lineage-preview-intro">{{ page.lineage_preview.text }}</p>
+  <ol class="lineage-minitree">
+    {% for person in page.lineage_preview.people %}
+    <li><span class="lineage-relationship">{{ person.relationship }}</span><strong>{{ person.name }}</strong><span>{{ person.detail }}</span></li>
+    {% endfor %}
+  </ol>
+</section>

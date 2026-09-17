@@ -289,3 +289,28 @@ strong { font-weight: 650; }
   .hero h1 { font-size: clamp(2.8rem, 9vw, 3.8rem); }
 }
 @media print { .hero-art { display: none; } .hero-grid { display: block; } }
+
+/* Academic lineage: a compact introduction and a readable historical page. */
+.lineage-preview { padding-block: 3rem 4.5rem; border-top: 1px solid var(--line); }
+.lineage-preview .section-heading { margin-bottom: 1.3rem; }
+.lineage-preview-intro { max-width: 760px; }
+.lineage-minitree { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); list-style: none; padding: 0; margin: 2rem 0 0; gap: 2.5rem; }
+.lineage-minitree li { position: relative; padding: 1.2rem 0 0; margin: 0; border-top: 2px solid var(--blue); }
+.lineage-minitree li:not(:last-child)::after { content: ''; position: absolute; width: 2.5rem; height: 1px; background: var(--line); right: -2.5rem; top: -1px; }
+.lineage-minitree strong { display: block; font-family: var(--serif); color: var(--ink); font-size: 1.5rem; line-height: 1.3; margin-block: .5rem; font-weight: 500; }
+.lineage-minitree span { display: block; color: var(--muted); font-size: .85rem; }
+.lineage-minitree .lineage-relationship { color: var(--blue); font-size: .8rem; }
+.lineage-map { margin-bottom: 3.5rem; }
+.lineage-map img { display: block; width: 100%; height: auto; border: 1px solid var(--line); }
+.lineage-map figcaption { font-size: .85rem; color: var(--muted); padding-top: .8rem; line-height: 1.65; }
+.lineage-map figcaption a { display: inline-block; margin-left: .4rem; }
+.lineage-prose h3 { border-left: 2px solid var(--blue); padding-left: 1rem; margin-top: 2rem; }
+.lineage-prose details { border-top: 1px solid var(--line); padding-top: 1.1rem; margin-top: 2.5rem; }
+.lineage-prose summary { cursor: pointer; color: var(--ink); font-weight: 600; padding-block: .3rem; }
+@media (max-width: 650px) {
+  .lineage-minitree { grid-template-columns: 1fr; gap: 1.6rem; }
+  .lineage-minitree li:not(:last-child)::after { display: none; }
+  .lineage-preview { padding-block: 2.5rem 3rem; }
+  .lineage-map { margin-bottom: 2.5rem; }
+}
+@media print { .lineage-minitree { display: block; } .lineage-minitree li { margin-bottom: 1rem; } }

@@ -1,5 +1,0 @@
----
-layout: default
----
-<header class="page-header shell"><p class="eyebrow">Talks &amp; presentations</p><h1>{{ page.headline }}</h1><div class="page-description prose">{{ content }}</div></header>
-<section class="shell talks-list">{% assign talks = site.talks | sort: 'date' | reverse %}{% for talk in talks %}<article class="talk-row"><time datetime="{{ talk.date_iso }}">{{ talk.display_date }}</time><div><h2><a href="{{ talk.url | relative_url }}">{{ talk.title }}</a></h2><p>{{ talk.venue }}</p><p class="authors">{{ talk.authors }}</p></div></article>{% endfor %}</section>

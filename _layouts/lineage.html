@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<header class="page-header shell">
+  <a class="back-link" href="{{ '/about/' | relative_url }}">← About Arshad</a>
+  <p class="eyebrow">{{ page.title }}</p>
+  <h1>{{ page.headline }}</h1>
+  <p class="page-description">{{ page.description }}</p>
+</header>
+<figure class="lineage-map shell">
+  <a href="{{ '/lineage/lineage.png' | relative_url }}" aria-label="Open the academic lineage diagram at full size"><img src="{{ '/lineage/lineage.png' | relative_url }}" width="1642" height="935" alt="Academic lineage diagram showing branches through physics and atmospheric science to Arshad Arjunan Nair; the text below follows the main lineage."></a>
+  <figcaption>{{ page.map_caption }} <a href="{{ '/lineage/lineage.png' | relative_url }}">Open full-size diagram</a></figcaption>
+</figure>
+<div class="shell page-body"><article class="prose lineage-prose">{{ content }}</article></div>

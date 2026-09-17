@@ -5,6 +5,20 @@ eyebrow: About
 permalink: /about/
 nav_order: 4
 section: about
+lineage_preview:
+  heading: Academic lineage
+  text: A scientific family tree, connecting my doctoral work to generations of teachers and researchers in atmospheric science, physics, and mathematics.
+  link_text: Explore the family tree
+  people:
+    - name: Arshad Arjunan Nair
+      detail: PhD · University at Albany · 2021
+      relationship: My doctoral work
+    - name: Fangqun Yu
+      detail: PhD · UCLA · 1998
+      relationship: My doctoral adviser
+    - name: Richard Peter Turco
+      detail: PhD · Illinois · 1971
+      relationship: My adviser’s adviser
 ---
 
 I am an atmospheric scientist working at the intersection of physical modeling, observations, machine learning, and environmental health. I study how atmospheric particles form and evolve, how they influence clouds and climate, and how air-quality patterns shape human exposure.
