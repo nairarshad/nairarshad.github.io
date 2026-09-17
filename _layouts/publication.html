@@ -1,0 +1,6 @@
+---
+layout: default
+---
+<header class="page-header publication-header shell"><a class="back-link" href="{{ '/publications/' | relative_url }}">← All publications</a><p class="eyebrow">{{ page.journal }} · {{ page.year }}</p><h1>{{ page.title }}</h1><p class="authors">{{ page.authors }}</p>{% if page.contribution %}<p class="contribution">{{ page.contribution }}</p>{% endif %}<div class="button-row">{% if page.doi %}<a class="button button-dark" href="{{ page.doi }}">Read journal article <span aria-hidden="true">↗</span></a>{% endif %}{% if page.pdf %}<a class="button button-plain" href="{{ page.pdf | relative_url }}">Download PDF</a>{% endif %}</div></header>
+<div class="shell page-body"><article class="prose">{{ content }}</article></div>
+
