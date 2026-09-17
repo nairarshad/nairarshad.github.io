@@ -64,4 +64,4 @@ exclude:
 - ASSET_NOTES.md
 - tools
 - vendor
-hero_image: /assets/images/atmospheric-research.png
+hero_image: /assets/images/atmospheric-research.webp

@@ -314,3 +314,19 @@ strong { font-weight: 650; }
   .lineage-map { margin-bottom: 2.5rem; }
 }
 @media print { .lineage-minitree { display: block; } .lineage-minitree li { margin-bottom: 1rem; } }
+
+/* Historical images sit beside their matching Markdown biographies. */
+.lineage-person { display: grid; grid-template-columns: 112px minmax(0,1fr); grid-template-rows: auto 1fr; gap: .5rem 1.5rem; padding-block: 1.6rem; border-top: 1px solid var(--line); }
+.lineage-person > .lineage-person-image { grid-column: 1; grid-row: 1 / span 2; margin: 0; }
+.lineage-person-image img { display: block; width: 112px; height: 112px; object-fit: contain; border-radius: 3px; border: 1px solid var(--line); background: var(--mist); }
+.lineage-prose .lineage-person > h3 { grid-column: 2; padding: 0; margin: 0; border: 0; }
+.lineage-person > p:not(.lineage-person-image) { grid-column: 2; margin: 0; }
+.lineage-person-text { grid-template-columns: minmax(0,1fr); }
+.lineage-prose .lineage-person-text > h3, .lineage-person-text > p { grid-column: 1; }
+@media (max-width: 500px) {
+  .lineage-person { grid-template-columns: 76px minmax(0,1fr); column-gap: 1rem; }
+  .lineage-person-image img { width: 76px; height: 76px; }
+  .lineage-prose .lineage-person > h3 { font-size: 1.05rem; line-height: 1.5; }
+  .lineage-person-text { grid-template-columns: minmax(0,1fr); }
+}
+@media print { .lineage-person { break-inside: avoid; } }

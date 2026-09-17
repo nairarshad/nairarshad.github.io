@@ -171,8 +171,8 @@ def main():
     # targeted text/filename guards, not a claim of semantic or image recognition.
     image_files = [p for p in root.rglob('*') if p.suffix.lower() in ('.png', '.jpg', '.jpeg', '.webp', '.gif')]
     for file in image_files:
-        if re.search(r'portrait|headshot|profile|arshad[-_]nair', file.name, re.I):
-            error(f'Portrait-like asset filename remains: {file.relative_to(root)}')
+        if file.name.lower() == 'nair.png' or re.search(r'arshad[-_]nair', file.name, re.I):
+            error(f'Arshad portrait asset remains: {file.relative_to(root)}')
     sensitive = re.compile(r'\b(?:immigration|visa|spouse|husband|wife|married)\b|Sagarika\s+Basak|\bH[ -]?[14]B?\b|\bfamily circumstances\b', re.I)
     current_role = re.compile(r'\b(?:currently|presently|I am|I work|I serve)\b[^.\n]{0,110}\b(?:Ramanujan|ISRO|Vikram Sarabhai)\b|(?:Ramanujan|ISRO|Vikram Sarabhai)[^.\n]{0,80}\b(?:present|current appointment)\b', re.I)
     for path, page in pages.items():
@@ -180,8 +180,8 @@ def main():
         if sensitive.search(visible): error(f'{path.relative_to(root)}: private family/immigration text guard matched')
         if current_role.search(visible): error(f'{path.relative_to(root)}: possibly current ISRO/Fellow role language')
         for img in page.images:
-            if re.search(r'portrait|headshot', img.get('alt', ''), re.I):
-                error(f'{path.relative_to(root)}: portrait/headshot alt text remains')
+            if re.search(r'portrait|headshot', img.get('alt', ''), re.I) and re.search(r'Arshad', img.get('alt', ''), re.I):
+                error(f'{path.relative_to(root)}: Arshad portrait/headshot alt text remains')
     config = (source / '_config.yml').read_text(encoding='utf-8')
     if re.search(r'Ramanujan|ISRO|Vikram Sarabhai', scalar(config, 'role') + scalar(config, 'affiliation'), re.I):
         error('_config.yml: current-role/affiliation field still names the former appointment')
