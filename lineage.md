@@ -16,11 +16,9 @@ The recent portion follows doctoral advising. Farther back, the tree also includ
 
 ## Atmospheric science and doctoral advisers
 
-</section>
-
 <section class="lineage-person" markdown="1">
 
-![Arshad Arjunan Nair]({{ '/lineage/nair.png' | relative_url }}){: width="112" height="112" loading="lazy" decoding="async"}
+![Arshad Arjunan Nair]({{ '/lineage/nair.webp' | relative_url }}){: width="112" height="112" loading="lazy" decoding="async"}
 {: .lineage-person-image}
 
 ### Arshad Arjunan Nair
